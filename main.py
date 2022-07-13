@@ -50,6 +50,7 @@ def plot_3d_to_2d():
         scaleratio=1,
     )
     fig.show()
+    fig.write_html('./3dto2d.html')
 
 
 def plot_4d_to_3d():
@@ -80,6 +81,7 @@ def plot_4d_to_3d():
     fig = px.scatter_3d(df4d, x='x', y='y', z='z', color='w', color_continuous_scale=plotly.colors.sequential.Viridis)
     fig.update_traces(marker=dict(size=2))
     fig.show()
+    fig.write_html('./4dto3d.html')
 
 
 if __name__ == '__main__':
