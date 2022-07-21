@@ -101,7 +101,7 @@ def matrix_plot_3d_to_2d():
         scaleratio=1,
     )
     fig.show()
-    fig.write_html('./3dto2d_matrix.html', include_plotlyjs='cdn')
+    fig.write_html('./3dto2d_matrix.html', include_plotlyjs='cdn', full_html=False)
 
 
 def matrix_plot_4d_to_3d():
@@ -119,7 +119,7 @@ def matrix_plot_4d_to_3d():
     fig = px.scatter_3d(df4d, x='x', y='y', z='z', color='w', color_continuous_scale=plotly.colors.sequential.Viridis)
     fig.update_traces(marker=dict(size=2))
     fig.show()
-    fig.write_html('./4dto3d_matrix.html', include_plotlyjs='cdn')
+    fig.write_html('./4dto3d_matrix.html', include_plotlyjs='cdn', full_html=False)
 
 
 if __name__ == '__main__':
